@@ -23,7 +23,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="row h-100 align-items-center">
         <div class="container">
@@ -37,29 +36,78 @@
                         <div class="card-body">
                             <form id="novoUsuario" method="post" action="novoUsuario.html">
                                 <div class="row">
-                                    <div class="form-group">
-                                        <label for="nomeUsuario">Nome</label>
-                                        
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">@</div>
+                                    <div class="col-sm">
+                                        <div class="form-group mb-5">
+                                            <label for="nomeUsuario">Nome</label>                                        
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi-people-fill"></i></div>
+                                                </div>
+                                                <input id="nomeUsuario" class="form-control" type="text" placeholder="Seu Nome" required>
                                             </div>
-                                            <input id="nomeUsuario" class="form-control" type="text" placeholder="Seu Nome" requiredd>
                                         </div>
                                     </div>
+                                </div>    
                                 <div class="row">
-                                    <div class="col-lg"></div>
-                                    <div class="col-lg"></div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="mailUsuario">Email</label>                                        
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi">@</i></div>
+                                                </div>
+                                                <input id="mailUsuario" class="form-control" type="email" placeholder="Seu Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="mail2Usuario">Email</label>                                        
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi">@</i></div>
+                                                </div>
+                                                <input id="mail2Usuario" class="form-control" type="email" placeholder="repita seu Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg"></div>
-                                    <div class="col-lg"></div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="senhaUsuario">Senha</label>                                        
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi-lock"></i></div>
+                                                </div>
+                                                    <input id="senhaUsuario" class="form-control" type="password" placeholder="Seu Nome" required>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="senha2Usuario">Repita a Senha</label>                                        
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><i class="bi-lock"></i>
+                                                    </div>
+                                                    </div>
+                                                        <input id="senha2Usuario" class="form-control" type="password" placeholder="repita sua senha" required>
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm text-center"> 
+                                                <button type="submit" class="btn btn-success">Cadastrar</button>
+                                            </div> 
+                                        </div>        
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm"></div>
+
             </div>
         </div>
     </div>
