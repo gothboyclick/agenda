@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Agenda de contatos</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
 
@@ -36,7 +37,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                        id="menuCadastros" aria-haspopup="true" aria-expanded="false">
+                            id="menuCadastros" aria-haspopup="true" aria-expanded="false">
                             <i class="bi-card-list"></i> Cadastros</a>
                         <div class="dropdown-menu" aria-labelledby="menuCadastros">
                             <a class="dropdown-item" href="listaContatos.html">
@@ -68,6 +69,165 @@
             </div>
         </div>
     </nav>
+    <div class="row h-100 align-items-center pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"></div>
+                <div class="col-sm-12">
+                    <div class="card border-primary my-5">
+                        <div class="card-header bg-primary text-white">
+                            <h5>Cadastro novo contato</h5>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="novoUsuario.html">
+                            <h4 class="text-primary">Dados pessoais</h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="nomeContato">Nome</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><i class="bi-person-circle"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input class="form-control" type="text" name="nomeContato"
+                                                        placeholder="Seu nome" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group ">
+                                                <label for="nascimentoContato">Data de nascimento</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><i class="bi-calendar-date"></i>
+                                                        </div>
+                                                    </div>
+                                                    <input id="nascimentoContato" class="form-control" type="text"
+                                                        placeholder="DD/MM/AAAA" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group ">
+                                                <label for="sexoContato">Sexo</label>
+                                                <div class="input-group">
+                                                    <div class="form-check form-check-inline">
+                                                        <input type="radio" class="form-check-input" name="sexoContato"
+                                                            value="sexoMasculino" id="masculino">
+                                                        <label class="form-check-label"
+                                                            for="sexoMasculino">Masculino</label>
+
+                                                        <input type="radio" class="form-check-input" name="sexoContato"
+                                                            value="sexoFeminino" id="feminino">
+                                                        <label class="form-check-label"
+                                                            for="sexoFeminino">Feminino</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group ">
+                                                <label for="mailContato">Email</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <div class="input-group-text"><i class="bi-at"></i></div>
+                                                    </div>
+                                                    <input id="mailContato" class="form-control" type="email"
+                                                        name="mailContato" placeholder="digite o email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="row">
+                                                <div class="col-sm">
+                                                    <div class="form-group ">
+                                                        <label for="fotoContato">Foto</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text"><i class="bi-file-earmark-person"></i></div>
+                                                            </div>
+                                                            <div class="custom-file">
+                                                                <input id="fotoContato" class="custom-file" name="fotoContato"
+                                                                type="file">
+                                                                <label for="" class="custom-file-label">Escolher arquivo</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h4 class="text-primary">Telefones</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="mailUsuario">Email</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi">@</i></div>
+                                                </div>
+                                                <input id="mailUsuario" class="form-control" type="email"
+                                                    placeholder="Seu Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="mail2Usuario">Email</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi">@</i></div>
+                                                </div>
+                                                <input id="mail2Usuario" class="form-control" type="email"
+                                                    placeholder="repita seu Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="text-primary">Endereço</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm"></div>
+                                    <div class="col-sm"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm text-center">
+                                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="modal fade" id="modalSobreAplicacao" tabindex="-1" role="dialog" aria-labelledby="sobreAplicacao"
         aria-hidden="true">
@@ -92,7 +252,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 </html>
