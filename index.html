@@ -7,6 +7,9 @@
   <title>Agenda de contatos</title>
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-icons.css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/messages_pt_BR.js"></script>
   <style>
     html {
       height: 100%;
@@ -36,20 +39,17 @@
                 <div class="form-group">
                   <label for="mailUsuario">E-mail</label>
                   <input type="email" class="form-control" id="mailUsuario" name="mailUsuario"
-                    placeholder="Digite seu e-mail">
+                    placeholder="Digite seu e-mail" required>
                     <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém, só com a gente</small>
                 </div>
                 <div class="form-group">
                   <label for="senhaUsuario">Senha</label>
                   <input type="password" class="form-control" id="senhaUsuario" name="senhaUsuario"
-                    placeholder="Digite sua senha">
+                    placeholder="Digite sua senha" required>
                 </div>
-
                   <div class="col-sm">
-                    <button id="entrarLogin" type="submit" class="btn btn-primary btn-block ">
-                      <a class="btn btn-block" href="main.html"></a>Entrar</button>
+                    <button id="entrarLogin" type="submit" class="btn btn-primary btn-block ">Entrar</button>
                   </div>
-
               </form>
             </div>
             <div class="card-footer">
@@ -75,4 +75,35 @@
     </div>
   </div>
 </body>
+<script>
+  jQuery.validator.setDefaults({
+    errorElement: 'span',
+    errorPlacement: function(error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function(element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function(element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+    $(document).ready(function(){
+      $("#login").validate({
+        rules:{
+          mailUsuario: {
+            required: true,
+            email: true,
+          },
+          senhaUsuario: {
+            required:true
+          }
+        }
+      });
+    });
+</script>
+
+
+
 </html>
